@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Computer Science</title>
+<link rel="stylesheet" href="AmazingStyle.css">
+<!-- This favicon was created with the help of Favicon.cc -->
+<link rel="icon" href="favicon.ico">
+</head>
+<body>
+	<!-- This navbar was created with the help of W3Schools, at https://www.w3schools.com/howto/howto_js_topnav.asp -->
+	<div class="flexcontainer">
+		<ul class="flexcontainer">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="AboutandHobbies.html">About Me</a></li>
+			<li><a href="CommunityService.html">Community Service</a></li>
+			<li><a class="active" href="ComputerScience.html">Computer
+					Science</a></li>
+			<li><a href="Humanities.html">Humanities</a></li>
+			<li><a href="Language.html">Language</a></li>
+			<li><a href="Math.html">Math</a></li>
+			<li><a href="Physics.html">Physics</a></li>
+			<li><a href="STEM.html">STEM</a></li>
+		</ul>
+	</div>
+
+	<div class="border clearfix">
+		<h1>Computer Science</h1>
+		<p class="newText footer">Computer Science with Mrs. Taricco was
+			my first introduction to computer science, and we ended up starting
+			the year with an introduction to HTML and CSS. This is when we
+			created our own personal websites, the updated version of which is
+			what you are seeing right now! We then moved into learning Java, and
+			this is what we spent a large amount of time doing throughout the
+			year. From coding a program that checks the validity of credit card
+			numbers, to a program that draws colorful stars in random positions
+			(see below), the variety of assignments allowed for constant
+			learning, creativity, and challenge to be major components of the
+			class. All of this created an excellent introduction to coding, and
+			class allowed everyone to learn, from those that had been coding most
+			of their life to those like me who had never truly coded. It also
+			allowed us to take a more computer science based view to problems as
+			opposed to viewing them purely mathematically.</p>
+	</div>
+	<div class="border">
+		<h2 class=textLessMargin>Sieve of Eratosthenes</h2>
+		<div class="container">
+			<div class="headingAndText">
+				<iframe src="Docs/primes.pdf" style="width: 100%; height: 26vw;"></iframe>
+				<a class="newText" href="Docs/primes.pdf">Click
+					here for a full-screen PDF</a>
+			</div>
+			<div class="headingAndText">
+				<iframe src="Docs/SieveCode.pdf" style="width: 100%; height: 40vw;"></iframe>
+				<a class="newText" href="Docs/SieveCode.pdf">Click
+					here for a full-screen PDF</a>
+			</div>
+		</div>
+		<p class="newText footer">The first assignment shown is a coded
+			version of the Sieve of Eratosthenes. For this assignment we were
+			tasked with using an array in order to simulate the sieve in java.
+			What is interesting about this coding lab is that it allows for
+			primes to be computed in a very quick way, and the particular method
+			of prime calculations, when translated into java, allows for many
+			possible points of optimization. For example, instead of having to
+			run all the way through, the program only has to run until a certain
+			point which is determined by the square root of the upper bound. The
+			other interesting aspect of this way of computing primes is that it
+			requires no division, and thus is a unique way of quickly finding
+			many prime numbers in Java. A sample input and output are shown
+			above. So when coding this problem, I included the optimizations
+			listed above. You can see the code of the actual problem on the above
+			right, and a sample output on the above left.</p>
+	</div>
+
+	<div class="border clearfix">
+		<h2 class=textLessMargin>Drawing Stars</h2>
+		<p class="newText footer">This assignment was one of my favorites
+			and was called “Drawing Stars”. Using a Java applets and the graphics
+			method, the goal was to draw stars of random sizes, shapes, and
+			colors within a certain area. The way that I ended up doing this is
+			through the use of trigonometry and estimation of coordinates on two
+			circles, each with the same center and difference radii. I also ended
+			up using a lot of randomization, with the only input parameter being
+			the amount of stars that should be drawn. When coding the problem in
+			java, I used the random class to find the radius of the inner circle
+			on which the inside three points were plotted, then used a random
+			factor to the radius of the outer circle. By using trigonometry and
+			shifting angle units, the points could be plotted on each of these
+			circles that when used with the fillPolygon class would result in a
+			filled star being formed. After this was coded in, I added a random
+			coordinate offset, and a random color function. After doing all this
+			I was left with a fun and unique way of combining something that is
+			visually pleasing, with code and mathematics. Once again, a sample
+			input that draws 50 stars is shown.</p>
+		<div class="container">
+			<div class="headingAndText">
+				<iframe src="Docs/DrawingStarsCode.pdf"
+					style="width: 100%; height: 42vw;"></iframe>
+				<a class="newText" href="Docs/DrawingStarsCode.pdf">Click
+					here for a full-screen PDF</a>
+			</div>
+			<div class="headingAndText">
+				<iframe src="Docs/stars.pdf" style="width: 100%; height: 33vw;"></iframe>
+				<a class="newText" href="Docs/stars.pdf">Click
+					here for a full-screen PDF</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="border container">
+		<div class="headingAndText">
+			<h2 class=textLessMargin>Easter Sunday</h2>
+			<p class="newText textcenter textLessMargin">For this assignment
+				we were tasked with creating a java program that given a year
+				parameter, could calculate the month and day that Easter falls on.
+				To do this we were encouraged to use a very interesting formula
+				created by Carl Gauss in the year 1800, which involved many
+				mathematical operation all stemming of of just the initial year,
+				which eventually gives two numeric values, one being the month that
+				Easter Sunday falls on, and the other being the date. So in order to
+				accurately determine the date, we had to complete many mathematical
+				steps in java, and this taught us all a lesson in mathematical
+				prudence, which if not followed, can lead to logic errors in code. I
+				solved the problem by simply taking the year as an input, performing
+				the formula calculations on it, and then displaying the resulting
+				month and date. I ended up putting this assignment on my website
+				because of unique it was and how incredible the formula itself is.</p>
+		</div>
+		<div class="headingAndText">
+			<iframe src="Docs/EastSundayyyy.pdf"
+				style="width: 100%; height: 45vw;"></iframe>
+			<a class="newText" href="Docs/EastSundayyyy.pdf"">Click
+				here for a full-screen PDF</a>
+		</div>
+	</div>
+
+	<p class="footer">
+		Website Produced with the help of <a href="https://www.w3schools.com"
+			target="_blank">W3Schools.</a> Contact me at: dgkaminski@wpi.edu
+	</p>
+</body>
+</html>
