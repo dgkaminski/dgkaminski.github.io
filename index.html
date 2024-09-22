@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Daniel's Amazing Website</title>
-		<link rel="stylesheet" href="AmazingStyle.css">
-		<!--  This favicon was created with the help of Favicon.cc -->
-		<link rel="icon" href="favicon.ico">
-	</head>
-	<body>
-	<header>
-	<!-- This navbar was created with the help of W3Schools, at https://www.w3schools.com/howto/howto_js_topnav.asp -->
-	<div class="flexcontainer">
-	<ul class="flexcontainer">
-		 <li><a class="active" href="index.html">Home</a></li>
-		 <li><a href="AboutandHobbies.html">About Me</a></li>
-		 <li><a href="CommunityService.html">Community Service</a></li>
-		 <li><a href="ComputerScience.html">Computer Science</a></li>
-		 <li><a href="Humanities.html">Humanities</a></li>
-		 <li><a href="Language.html">Language</a></li>
-		 <li><a href="Math.html">Math</a></li>
-		 <li><a href="Physics.html">Physics</a></li>
-		 <li><a href="STEM.html">STEM</a></li>
-     </ul>
-	 </div>
-		
-	</header>
-	
-		<h1 class="blackborder">Welcome to my website!</h1>
-		<h2 class="blackborder">Thank you for visiting and feel free to explore!</h2>
-		 
-	<div class="imgborder">
-		 <img class="imagecenter image100" alt="Me at my first ever mountain hike." src="Images/HutHike2017.JPG"
-		 style=width:100%;>
-	</div>
-	
-	<p class="footer"> Website Produced with the help of <a href="https://www.w3schools.com" 
-		 target="_blank">W3Schools.</a> Contact me at: dgkaminski@wpi.edu</p>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Kaminski - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-box">
+        <h1>Daniel Kaminski</h1>
+        <p>Student at Cornell University | Electrical and Computer Engineering 27'</p>
+        <p>Analog/Mixed-Signal IC Designer | Semiconductor Device Engineering</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li>
+                <a href="#projects">Projects</a>
+                <ul class="dropdown">
+                    <li><a href="#project1">Project 1</a></li>
+                    <li><a href="#project2">Project 2</a></li>
+                    <li><a href="#project3">Project 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself here. Highlight your skills and what you're passionate about.</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Title 1</h3>
+            <p>Brief description of the project. What technologies did you use? What was the outcome?</p>
+        </div>
+        <div class="project">
+            <h3>Project Title 2</h3>
+            <p>Brief description of the project. What technologies did you use? What was the outcome?</p>
+        </div>
+        <div class="project">
+            <h3>Project Title 3</h3>
+            <p>Brief description of the project. What technologies did you use? What was the outcome?</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>EDU Email: dgk64@cornell.edu</p>
+        <p>Personal Email: daniel.kamin.23@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/daniel-kaminski-447785234/" target="_blank">Click Here</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Daniel Kaminski. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
