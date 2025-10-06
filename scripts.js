@@ -1,4 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Navigation Menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const body = document.body;
+
+    // Create overlay element
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    body.appendChild(overlay);
+
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        overlay.style.display = navMenu.classList.contains('active') ? 'block' : 'none';
+        body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Handle submenu toggles
+    const hasSubmenu = document.querySelectorAll('.has-submenu');
+    hasSubmenu.forEach(item => {
+        item.addEventListener('click', function(e) {
+            if (e.target.closest('a') && !e.target.closest('.submenu')) {
+                e.preventDefault();
+                this.classList.toggle('active');
+                const submenu = this.querySelector('.submenu');
+                submenu.classList.toggle('active');
+            }
+        });
+    });
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        overlay.style.display = 'none';
+        body.style.overflow = '';
+    });
+
     // Carousel functionality
     const images = document.querySelectorAll('.project-carousel .carousel-image');
     const leftArrow = document.querySelector('.carousel-arrow.left-arrow');

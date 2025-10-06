@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAR ADC Project - Daniel Kaminski</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="home-button" title="Go to home">⌂</a>
+        <div class="header-box">
+            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Daniel Kaminski</a></h1>
+            <p>Student at Cornell University | Electrical and Computer Engineering 27'</p>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li class="has-submenu">
+                    <a href="../index.html#projects">Projects <span class="arrow">▼</span></a>
+                    <ul class="submenu">
+                        <li><a href="sar-adc.html">SAR ADC</a></li>
+                        <!-- Add more project links as they are created -->
+                    </ul>
+                </li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="project-page">
+        <h2>4.44MS/s Fully Differential SAR ADC in TSMC 180nm</h2>
+        
+        <div class="project-carousel">
+            <img src="../Kestrel/Kestrel-1.JPG" alt="Kestrel Image 1" class="carousel-image" style="display: block; width: 100%; height: auto; transition: opacity 0.5s ease;">
+            <img src="../Kestrel/Kestrel-2.JPG" alt="Kestrel Image 2" class="carousel-image" style="display: none; width: 100%; height: auto; transition: opacity 0.5s ease;">
+            <img src="../Kestrel/Kestrel-3.JPG" alt="Kestrel Image 3" class="carousel-image" style="display: none; width: 100%; height: auto; transition: opacity 0.5s ease;">
+            <img src="../Kestrel/Kestrel-4.JPG" alt="Kestrel Image 4" class="carousel-image" style="display: none; width: 100%; height: auto; transition: opacity 0.5s ease;">
+            <img src="../Kestrel/Kestrel-5.JPG" alt="Kestrel Image 5" class="carousel-image" style="display: none; width: 100%; height: auto; transition: opacity 0.5s ease;">
+            <button class="carousel-arrow left-arrow" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px;">&#9664;</button>
+            <button class="carousel-arrow right-arrow" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px;">&#9654;</button>
+            <div class="carousel-indicators" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px;">
+                <span class="indicator" data-index="0" style="width: 10px; height: 10px; background: white; border-radius: 50%; cursor: pointer;"></span>
+                <span class="indicator" data-index="1" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
+                <span class="indicator" data-index="2" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
+                <span class="indicator" data-index="3" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
+                <span class="indicator" data-index="4" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
+            </div>
+        </div>
+
+        <section class="project-details">
+            <h3>Project Overview</h3>
+            <p>A fully differential 10-bit SAR ADC designed in TSMC 180nm technology, achieving 4.44MS/s sampling rate.</p>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li>10-bit resolution</li>
+                <li>4.44MS/s sampling rate</li>
+                <li>Fully differential architecture</li>
+                <li>Implemented in TSMC 180nm technology</li>
+            </ul>
+
+            <h3>Technical Details</h3>
+            <!-- Add more detailed technical information about your ADC -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Daniel Kaminski. All rights reserved.</p>
+    </footer>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

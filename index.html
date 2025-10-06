@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+        <a href="#top" class="home-button" title="Go to top">⌂</a>
         <div class="header-box">
         <h1>Daniel Kaminski</h1>
         <p>Student at Cornell University | Electrical and Computer Engineering 27'</p>
@@ -16,19 +17,26 @@
         </div>
     </header>
     
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li>
-                <a href="#projects">Projects</a>
-                <ul class="dropdown">
-                    <li><a href="#project1">Project 1</a></li>
-                    <li><a href="#project2">Project 2</a></li>
-                    <li><a href="#project3">Project 3</a></li>
-                </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="has-submenu">
+                    <a href="#projects">Projects <span class="arrow">▼</span></a>
+                    <ul class="submenu">
+                        <li><a href="projects/sar-adc.html">SAR ADC</a></li>
+                        <!-- More projects will be added here -->
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <section id="about" class="section">
@@ -41,25 +49,18 @@
     <section id="projects" class="section">
         <div class="section-bar"></div>
         <h2>Projects</h2>
-        <div class="project">
-            <h3>4.44MS/s fully/truly differential SAR ADC in TSMC 180nm</h3>
-            <div class="project-carousel" style="position: relative; overflow: hidden; max-width: 100%; height: auto;">
-            <img src="Kestrel/Kestrel-1.JPG" alt="Kestrel Image 1" class="carousel-image" style="display: block; max-width: 100%; height: auto; transition: opacity 0.5s ease;">
-            <img src="Kestrel/Kestrel-2.JPG" alt="Kestrel Image 2" class="carousel-image" style="display: none; max-width: 100%; height: auto; transition: opacity 0.5s ease;">
-            <img src="Kestrel/Kestrel-3.JPG" alt="Kestrel Image 3" class="carousel-image" style="display: none; max-width: 100%; height: auto; transition: opacity 0.5s ease;">
-            <img src="Kestrel/Kestrel-4.JPG" alt="Kestrel Image 4" class="carousel-image" style="display: none; max-width: 100%; height: auto; transition: opacity 0.5s ease;">
-            <img src="Kestrel/Kestrel-5.JPG" alt="Kestrel Image 5" class="carousel-image" style="display: none; max-width: 100%; height: auto; transition: opacity 0.5s ease;">
-            <button class="carousel-arrow left-arrow" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#9664;</button>
-            <button class="carousel-arrow right-arrow" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#9654;</button>
-            <div class="carousel-indicators" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px;">
-            <span class="indicator" data-index="0" style="width: 10px; height: 10px; background: white; border-radius: 50%; cursor: pointer;"></span>
-            <span class="indicator" data-index="1" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
-            <span class="indicator" data-index="2" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
-            <span class="indicator" data-index="3" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
-            <span class="indicator" data-index="4" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="thumbnail">
+                    <img src="Kestrel/Kestrel-1.JPG" alt="SAR ADC Project">
+                </div>
+                <div class="content">
+                    <h3>SAR ADC in TSMC 180nm</h3>
+                    <p>4.44MS/s fully differential 10-bit SAR ADC implemented in TSMC 180nm technology. Features advanced sampling techniques and optimized power consumption.</p>
+                    <a href="projects/sar-adc.html" class="project-link">Learn More →</a>
+                </div>
             </div>
-            </div>
-
+            <!-- More project cards will be added here -->
         </div>
     </section>
 
