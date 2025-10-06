@@ -32,27 +32,92 @@
     </nav>
 
     <section id="about" class="section">
+        <div class="section-bar"></div>
         <h2>About Me</h2>
-        <p>Write a brief introduction about yourself here. Highlight your skills and what you're passionate about.</p>
+        <p>Hello, my name is <img src="IMG_1741 2 copy.JPG" alt="Daniel Kaminski" style="vertical-align: middle; display: inline; width: 125px; height: auto;">
+        , and I'm passionate about analog and mixed-signal IC design!</p>
     </section>
 
     <section id="projects" class="section">
+        <div class="section-bar"></div>
         <h2>Projects</h2>
         <div class="project">
-            <h3>Project Title 1</h3>
-            <p>Brief description of the project. What technologies did you use? What was the outcome?</p>
-        </div>
-        <div class="project">
-            <h3>Project Title 2</h3>
-            <p>Brief description of the project. What technologies did you use? What was the outcome?</p>
-        </div>
-        <div class="project">
-            <h3>Project Title 3</h3>
-            <p>Brief description of the project. What technologies did you use? What was the outcome?</p>
+            <h3>4.44MS/s fully/truly differential SAR ADC in TSMC 180nm</h3>
+            <div class="project-carousel" style="position: relative; overflow: hidden; max-width: 100%; height: auto;">
+            <img src="Kestrel/Kestrel-1.jpg" alt="Kestrel Image 1" class="carousel-image" style="display: block; max-width: 100%; height: auto; transition: opacity 0.5s ease;">
+            <img src="Kestrel/Kestrel-2.jpg" alt="Kestrel Image 2" class="carousel-image" style="display: none; max-width: 100%; height: auto; transition: opacity 0.5s ease;">
+            <img src="Kestrel/Kestrel-3.jpg" alt="Kestrel Image 3" class="carousel-image" style="display: none; max-width: 100%; height: auto; transition: opacity 0.5s ease;">
+            <img src="Kestrel/Kestrel-4.jpg" alt="Kestrel Image 4" class="carousel-image" style="display: none; max-width: 100%; height: auto; transition: opacity 0.5s ease;">
+            <img src="Kestrel/Kestrel-5.jpg" alt="Kestrel Image 5" class="carousel-image" style="display: none; max-width: 100%; height: auto; transition: opacity 0.5s ease;">
+            <button class="carousel-arrow left-arrow" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#9664;</button>
+            <button class="carousel-arrow right-arrow" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;">&#9654;</button>
+            <div class="carousel-indicators" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px;">
+            <span class="indicator" data-index="0" style="width: 10px; height: 10px; background: white; border-radius: 50%; cursor: pointer;"></span>
+            <span class="indicator" data-index="1" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
+            <span class="indicator" data-index="2" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
+            <span class="indicator" data-index="3" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
+            <span class="indicator" data-index="4" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
+            </div>
+            </div>
+            <script>
+            const images = document.querySelectorAll('.project-carousel .carousel-image');
+            const leftArrow = document.querySelector('.carousel-arrow.left-arrow');
+            const rightArrow = document.querySelector('.carousel-arrow.right-arrow');
+            const indicators = document.querySelectorAll('.carousel-indicators .indicator');
+            let currentIndex = 0;
+            let timer;
+
+            function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.opacity = i === index ? '1' : '0';
+                img.style.display = i === index ? 'block' : 'none';
+            });
+            indicators.forEach((indicator, i) => {
+                indicator.style.background = i === index ? 'white' : 'gray';
+            });
+            }
+
+            function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+            }
+
+            function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+            }
+
+            function resetTimer() {
+            clearInterval(timer);
+            timer = setInterval(nextImage, 5000);
+            }
+
+            indicators.forEach(indicator => {
+            indicator.addEventListener('click', () => {
+                currentIndex = parseInt(indicator.getAttribute('data-index'));
+                showImage(currentIndex);
+                resetTimer();
+            });
+            });
+
+            rightArrow.addEventListener('click', () => {
+            nextImage();
+            resetTimer();
+            });
+
+            leftArrow.addEventListener('click', () => {
+            prevImage();
+            resetTimer();
+            });
+
+            timer = setInterval(nextImage, 3000); // Automatically cycle every 5 seconds
+            showImage(currentIndex); // Initialize the first image
+            </script>
         </div>
     </section>
 
     <section id="contact" class="section">
+        <div class="section-bar"></div>
         <h2>Contact Me</h2>
         <p>EDU Email: dgk64@cornell.edu</p>
         <p>Personal Email: daniel.kamin.23@gmail.com</p>

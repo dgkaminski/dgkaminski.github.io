@@ -5,24 +5,24 @@ body {
     background-color: #f5f5f5;
     color: #212020;
 }
-
 header {
     text-align: center;
     padding: 50px 20px;
     background: rgba(0, 0, 0, 0.7);
-    color: #212020;
+    color: #ddd9d9;
     position: relative;
-    background-image: url("flashADC-Layout-Cropped.png");
-    /*background-repeat: no-repeat;*/
-    background-position: 0 0;
+    background-image: url("firstRender.png");
+    background-size: cover; /* Make the image fit within the header without squishing */
+    background-repeat:no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image and shift it down by 25 pixels */
     height: 200px;
 }
 
 header .header-box {
     display: inline-block; /* Makes the box fit the text */
     padding: 20px;
-    background: rgba(198, 198, 198, 1.0); /* Light background for contrast */
-    border-radius: 1px; /* Rounded corners */
+    background: rgba(0, 0, 0, 0.5); /* Light background for contrast */
+    border-radius: 0px; /* Rounded corners */
     /*width: 100%;*/
 }
 
@@ -119,4 +119,26 @@ footer {
     to {
         opacity: 1;
     }
+}
+
+.style-bar {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.style-bar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.style-bar a:hover {
+    color: #0b6973;
 }
