@@ -41,14 +41,15 @@
     </nav>
 
     <main class="project-page">
-        <h2>4.44MS/s Trully & Fully Differential 8-Bit SAR ADC in TSMC 180nm</h2>
+        <h2>2.5GB/s Plesiochronous SERDES in GPDK45</h2>
         
         <div class="project-carousel">
-            <img src="../Kestrel/Kestrel-1.JPG" alt="Kestrel Image 1" class="carousel-image" style="display: block; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
-            <img src="../Kestrel/Kestrel-2.JPG" alt="Kestrel Image 2" class="carousel-image" style="display: none; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
-            <img src="../Kestrel/Kestrel-3.JPG" alt="Kestrel Image 3" class="carousel-image" style="display: none; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
-            <img src="../Kestrel/Kestrel-4.JPG" alt="Kestrel Image 4" class="carousel-image" style="display: none; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
-            <img src="../Kestrel/Kestrel-5.JPG" alt="Kestrel Image 5" class="carousel-image" style="display: none; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
+            <img src="../SERDES/Picture1.png" alt="Schematic 1" class="carousel-image" style="display: block; width: 100%; height: 500px; object-fit: contain; transition: opacity 0.5s ease;">
+            <img src="../SERDES/Picture2.png" alt="Schematic 2" class="carousel-image" style="display: none; width: 100%; height: 500px; object-fit: contain; transition: opacity 0.5s ease;">
+            <img src="../SERDES/Picture3.png" alt="Layout 1" class="carousel-image" style="display: none; width: 100%; height: 500px; object-fit: contain; transition: opacity 0.5s ease;">
+            <img src="../SERDES/Picture4.png" alt="Eye 1" class="carousel-image" style="display: none; width: 100%; height: 500px; object-fit: contain; transition: opacity 0.5s ease;">
+            <img src="../SERDES/Picture5.png" alt="Eye 2" class="carousel-image" style="display: none; width: 100%; height: 500px; object-fit: contain; transition: opacity 0.5s ease;">
+            <img src="../SERDES/Picture6.png" alt="Eye 3" class="carousel-image" style="display: none; width: 100%; height: 500px; object-fit: contain; transition: opacity 0.5s ease;">
             <button class="carousel-arrow left-arrow" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px;">&#9664;</button>
             <button class="carousel-arrow right-arrow" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px;">&#9654;</button>
             <div class="carousel-indicators" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px;">
@@ -57,29 +58,38 @@
                 <span class="indicator" data-index="2" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
                 <span class="indicator" data-index="3" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
                 <span class="indicator" data-index="4" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
+                <span class="indicator" data-index="5" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
             </div>
         </div>
 
         <section class="project-details">
             <h3>Project Overview</h3>
-            <p> This SAR ADC was implemented, along with my co-subteam lead Caden Xu, during my sophomore year as part of the 
-                analog subteam of Cornell Custom Silicon Systems (C2S2). We first began design in Skywater 130nm, but following Efabless (our MPW provider)
-                going bankrupt, we switched to TSMC 180nm, and were able to tape out our entire design, including test structures and a custom mixed-signal
-                padring with little more than 100 days from bankruptcy to tapeout deadline. 
-            </p>
-            <p>
-                This chip utilizes custom Verilog control logic to implemented inverted merged capacitor sampling, which was synthesized and placed and routed
-                by our physical design subteam, thus representing C2S2s first true mixed-signal tapeout. 
+            <p> For a Cornell course on analog IC design, I helped build a 2.5GB/s SERDES in GPDK 45nm. This included designing, simulating, 
+                and laying out, design feedback equalization (DFE), continuous time linear equalization (CTLE), serializers and deserializers,
+                clock and data recovery (CDR) and transmit equalization (TXEQ) circuitry. Subcircuits included current mode logic and it's associated
+                CMOS conversion circuitry, as well as a voltage controlled oscillator (VCO), phase locked loop (PLL), and channel model.
             </p>
 
-            <h3>Testing Images</h3>
+             <p> Assuming no equalization was performed on the signal, our eye diagram, a measure of how clearly the 1's and 0's being sent through
+                the system are seperable, looked something like the following image. As you can see, the eye, which is a superimposed image of 
+                all of the transmitted signals, is very "closed," meaning the data at the output cannot be decoded in any meaningful way. 
+            </p>
+
             <div style="text-align: center;">
-                <img src="../Kestrel/Testing1.jpg" alt="Testing Image 1" style="border-radius: 5px; max-width: 49%; height: auto; margin: 10px 0;">
-                <img src="../Kestrel/Testing2.jpg" alt="Testing Image 2" style="border-radius: 5px; max-width: 49%; height: auto; margin: 10px 0;">
+                <img src="../SERDES/Eye1.png" alt="Testing Image 1" style="border-radius: 5px; max-width: 49%; height: auto; margin: 10px 0;">
+            </div>
+            
+            <p> However, following our TEXEQ, CTLE, DFE, and CDR, the eye opens significantly, as is seen below, highlighting the success
+                of our SERDES design. The eye below is for a 2.5GB/s data rate passing through a single real pole and complex pole pair channel.
+            </p>
+
+            <div style="text-align: center;">
+                <img src="../SERDES/Eye2.png" alt="Testing Image 1" style="border-radius: 5px; max-width: 49%; height: auto; margin: 10px 0;">
             </div>
 
-            <h3>Technical Report </h3>
-            <embed src="../Kestrel/Final Presentation.pdf" type="application/pdf" width="100%" height="600px;">
+            <h3>Technical Report</h3>
+            <embed src="../SERDES/Report.pdf" type="application/pdf" width="100%" height="600px;">
+            
         </section>
     </main>
 

@@ -41,14 +41,15 @@
     </nav>
 
     <main class="project-page">
-        <h2>4.44MS/s Trully & Fully Differential 8-Bit SAR ADC in TSMC 180nm</h2>
+        <h2>40MS/s 4-Bit Flash ADC in Skywater 130nm</h2>
         
         <div class="project-carousel">
-            <img src="../Kestrel/Kestrel-1.JPG" alt="Kestrel Image 1" class="carousel-image" style="display: block; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
-            <img src="../Kestrel/Kestrel-2.JPG" alt="Kestrel Image 2" class="carousel-image" style="display: none; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
-            <img src="../Kestrel/Kestrel-3.JPG" alt="Kestrel Image 3" class="carousel-image" style="display: none; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
-            <img src="../Kestrel/Kestrel-4.JPG" alt="Kestrel Image 4" class="carousel-image" style="display: none; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
-            <img src="../Kestrel/Kestrel-5.JPG" alt="Kestrel Image 5" class="carousel-image" style="display: none; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
+            <img src="../FlashADC/3to8-Layout.png" class="carousel-image" style="display: block; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
+            <img src="../FlashADC/16to4-Layout.png" class="carousel-image" style="display: block; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
+            <img src="../FlashADC/WholeDie.jpg" class="carousel-image" style="display: block; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
+            <img src="../FlashADC/flashADC-Layout.png" class="carousel-image" style="display: block; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
+            <img src="../FlashADC/IMG_6586.JPG" class="carousel-image" style="display: block; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
+            <img src="../FlashADC/RS-Layout.png" class="carousel-image" style="display: block; width: 100%; height: 400px; object-fit: cover; transition: opacity 0.5s ease;">
             <button class="carousel-arrow left-arrow" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px;">&#9664;</button>
             <button class="carousel-arrow right-arrow" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer; border-radius: 4px;">&#9654;</button>
             <div class="carousel-indicators" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px;">
@@ -57,29 +58,24 @@
                 <span class="indicator" data-index="2" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
                 <span class="indicator" data-index="3" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
                 <span class="indicator" data-index="4" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
+                <span class="indicator" data-index="5" style="width: 10px; height: 10px; background: gray; border-radius: 50%; cursor: pointer;"></span>
             </div>
         </div>
 
         <section class="project-details">
             <h3>Project Overview</h3>
-            <p> This SAR ADC was implemented, along with my co-subteam lead Caden Xu, during my sophomore year as part of the 
-                analog subteam of Cornell Custom Silicon Systems (C2S2). We first began design in Skywater 130nm, but following Efabless (our MPW provider)
-                going bankrupt, we switched to TSMC 180nm, and were able to tape out our entire design, including test structures and a custom mixed-signal
-                padring with little more than 100 days from bankruptcy to tapeout deadline. 
-            </p>
-            <p>
-                This chip utilizes custom Verilog control logic to implemented inverted merged capacitor sampling, which was synthesized and placed and routed
-                by our physical design subteam, thus representing C2S2s first true mixed-signal tapeout. 
+            <p> My first ever analog tapeout was a 40MS/s Flash ADC on the open source Skywater 130nm node. Just like the SAR ADC, this project
+                was completed as part of the C2S2 project team. At this time, we still used open source tools, and so the schematic capture and simulation
+                were performed with XSchem and NGSpice, and the layout with Magic VLSI (thank you Tim Edwards!). An added benefit of the open source nature
+                of this project is that I can share lots of cool layout images on the carousel above. Enjoy!
             </p>
 
-            <h3>Testing Images</h3>
-            <div style="text-align: center;">
-                <img src="../Kestrel/Testing1.jpg" alt="Testing Image 1" style="border-radius: 5px; max-width: 49%; height: auto; margin: 10px 0;">
-                <img src="../Kestrel/Testing2.jpg" alt="Testing Image 2" style="border-radius: 5px; max-width: 49%; height: auto; margin: 10px 0;">
-            </div>
+            <p>
+                If you are interested in chip art, you can read an associated blog post <a href="https://c2s2.engineering.cornell.edu/blogposts/SP24/ImgSilicon.html">here</a>.
+            </p>
 
             <h3>Technical Report </h3>
-            <embed src="../Kestrel/Final Presentation.pdf" type="application/pdf" width="100%" height="600px;">
+            <embed src="../FlashADC/Presentation.pdf" type="application/pdf" width="100%" height="600px;">
         </section>
     </main>
 
