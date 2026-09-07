@@ -8,37 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="../index.html" class="home-button" title="Go to home">⌂</a>
-        <div class="header-box">
-            <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Daniel Kaminski</a></h1>
-            <p>Student at Cornell University | Electrical and Computer Engineering 27'</p>
-            <p>Analog/Mixed-Signal IC Designer | Semiconductor Device Engineering</p>
-        </div>
-    </header>
-    
-    <nav class="navbar">
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="nav-menu">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#about">About</a></li>
-                <li class="has-submenu">
-                    <a href="../index.html#projects">Projects <span class="arrow">▼</span></a>
-                    <ul class="submenu">
-                        <li><a href="sar-adc.html">SAR ADC</a></li>
-                        <li><a href="serdes.html">SERDES</a></li>
-                        <li><a href="flash.html">Flash ADC</a></li>
-                    </ul>
-                </li>
-                <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div data-site-header data-base-path="../"></div>
 
     <main class="project-page">
         <h2>40MS/s 4-Bit Flash ADC in Skywater 130nm</h2>
@@ -79,10 +49,9 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Daniel Kaminski. All rights reserved.</p>
-    </footer>
+    <div data-site-footer></div>
 
+    <script src="../site-chrome.js"></script>
     <script src="../scripts.js"></script>
 </body>
 </html>

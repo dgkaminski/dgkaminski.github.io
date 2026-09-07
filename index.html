@@ -8,47 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="#top" class="home-button" title="Go to top">⌂</a>
-        <div class="header-box">
-        <h1>Daniel Kaminski</h1>
-        <p>Student at Cornell University | Electrical and Computer Engineering 27'</p>
-        <p>Analog/Mixed-Signal IC Designer | Semiconductor Device Engineering</p>
-        </div>
-    </header>
-    
-    <nav class="navbar">
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="nav-menu">
-            <ul>
-                <li><a href="#top">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li class="has-submenu">
-                    <a href="#projects">Projects <span class="arrow">▼</span></a>
-                    <ul class="submenu">
-                        <li><a href="projects/sar-adc.html">SAR ADC</a></li>
-                        <li><a href="projects/serdes.html">SERDES</a></li>
-                        <li><a href="projects/flash.html">Flash ADC</a></li>
-                        <!-- More projects will be added here -->
-                    </ul>
-                </li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div data-site-header data-base-path="./"></div>
 
     <section id="about" class="section">
         <div class="section-bar"></div>
         <h2>About Me</h2>
-        <p>Hello, my name is <img src="IMG_1741 2 copy.JPG" alt="Daniel Kaminski" style="vertical-align: middle; display: inline; width: 125px; height: auto;">, and I'm passionate about analog and mixed-signal IC design!</p>
+        <p>Hello, my name is <img src="IMG_1741 2 copy.JPG" alt="Daniel Kaminski" style="vertical-align: middle; display: inline; width: 100px; height: auto;">, 
+            and I'm passionate about all things related to analog integrated circuit design. Whether that be wireline transcievers, data converters, 
+            or novel applications of analog design concepts. </p>
         <p>
-            Feel free to explore this page to learn more about some things I've worked
-            on in the past. If you are interested in learning more about any of them, or have some suggestions
-            to offer, my contact information can be found at the bottom of this page.
+            Thank you for taking the time to visit my page, and feel free to explore the projects below to see what I've worked
+            on in the past. If you are interested in contacting me or getting a copy of my <a href="DanielKaminski-Resume.pdf" target="_blank" rel="noopener">resume</a>, feel free to do so with the information at the <a href="#contact">bottom of this page</a>.  
         </p>
     </section>
 
@@ -56,6 +26,15 @@
         <div class="section-bar"></div>
         <h2>Projects</h2>
         <div class="projects-grid">
+            <div class="project-card">
+                <div class="thumbnail">
+                    <img src="AdiabaticADC/c2s2-2026-analog-chip-plot.jpg" alt="Kakapo Tapeout Micrograph">
+                </div>
+                <div class="content">
+                    <h3>40MS/S "Adiabatic" Flash ADC in TSMC 180nm</h3>
+                    <a href="projects/adiabatic.html" class="project-link">Learn More →</a>
+                </div>
+            </div>
             <div class="project-card">
                 <div class="thumbnail">
                     <img src="Kestrel/Kestrel-1.JPG" alt="SAR ADC Project">
@@ -90,15 +69,15 @@
     <section id="contact" class="section">
         <div class="section-bar"></div>
         <h2>Contact Me</h2>
+        <p>Resume: <a href="DanielKaminski-Resume.pdf" target="_blank" rel="noopener">Click Here</a></p>
         <p>EDU Email: dgk64@cornell.edu</p>
         <p>Personal Email: daniel.kamin.23@gmail.com</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/daniel-kaminski-447785234/" target="_blank">Click Here</a></p>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Daniel Kaminski. All rights reserved.</p>
-    </footer>
+    <div data-site-footer></div>
 
+    <script src="site-chrome.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

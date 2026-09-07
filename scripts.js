@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
     const body = document.body;
 
+    if (!hamburger || !navMenu) {
+        return;
+    }
+
     // Create overlay element
     const overlay = document.createElement('div');
     overlay.className = 'nav-overlay';
@@ -42,6 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const leftArrow = document.querySelector('.carousel-arrow.left-arrow');
     const rightArrow = document.querySelector('.carousel-arrow.right-arrow');
     const indicators = document.querySelectorAll('.carousel-indicators .indicator');
+
+    if (!images.length || !leftArrow || !rightArrow) {
+        return;
+    }
     let currentIndex = 0;
     let timer;
 
